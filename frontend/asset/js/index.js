@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const buyBtn = document.getElementById('buy-btn');
     const infoBtn = document.getElementById('info-btn');
     if (customerId) {
-      registerBtn.href = './main.html';
-      buyBtn.href = './main.html';
+      registerBtn.href = 'frontend/pages/main.html';
+      buyBtn.href = 'frontend/pages/main.html';
 
     } else {
-      registerBtn.href = './register.html';
-      buyBtn.href = './register.html';
+      registerBtn.href = 'frontend/pages/register.html';
+      buyBtn.href = 'frontend/pages/register.html';
     }
   });
