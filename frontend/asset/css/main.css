@@ -1,0 +1,640 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .left, .center, .right{
+    display: inline-block;
+    height: 100%;
+}
+
+header .left, .right{
+    width: 20%;
+}
+
+header .center{
+    width: 58%;
+    text-align: center;
+}
+
+header .right{
+    text-align: right;
+    margin-top: 30px;
+    height: 100%;
+}
+
+header .right button{
+    border: 0;
+    border-radius: 50%;
+    width: 15%;
+    height: 35%;
+    margin: 5px;
+}
+
+header img{
+    width: 40%;
+}
+
+header input{
+    width: 90%;
+    height: 40px;
+    border: 0;
+    padding: 5px;
+}
+.menu-toggle {
+    display: inline-block;
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1001;
+}
+.mobile-nav {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 60px 0 0; 
+}
+
+.mobile-nav li {
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+}
+.mobile-nav.active {
+    left: 0;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.desktop-nav{
+    margin-top: 40px;
+}
+.desktop-nav ul{
+    text-align: center;
+}
+
+.desktop-nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.desktop-nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+.desktop-nav ul li a:hover{
+    color: #409F3A;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slide img{
+    width: 100%;
+    height: 500px; 
+    overflow: hidden;
+    position: relative;
+}
+section .filter .infomation {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+section .filter {
+    text-align: center;
+}
+
+section .filter .infomation h4,h6 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+section .filter .infomation .gender,
+section .filter .infomation .color, 
+section .filter .infomation .size, 
+section .filter .infomation .price {
+    width: 20%;
+}
+
+section .filter .infomation p {
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: bold;
+    text-align: center;
+}
+
+section .filter .infomation select {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+
+section .filter .infomation .gender label {
+    display: block;
+    text-align: left;
+    padding: 5px 0;
+    padding-left: 20%;
+    white-space: nowrap;
+}
+
+section .filter .infomation .gender label input {
+    margin-right: 20px;
+}
+
+section .filter .search{
+    padding: 3px 30px;
+    background-color: #409F3A;
+    border: 0px ;
+    border-radius: 8px;
+    color: #fff;
+}
+.product {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.product h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.product .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product .product-card {
+    border: 0;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: #f7f7f7;
+}
+
+.product .product-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product .product-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product .product-card .price {
+    font-size: 16px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.product .color-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product .color-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: inline-block;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product .color-dot:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border: 1px solid #000;
+}
+
+.product .color-dot.active {
+    border: 2px solid #333;
+    transform: scale(1.1);
+    
+}
+footer{
+    height: 300px;
+    background-color: #000;
+    color: #bdb9b9;
+    padding: 30px;
+}
+
+footer .tbhead{
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+footer .tbhead .col1{
+    color: #409F3A;
+    font-size: 30px;
+}
+
+footer table tr .col1{
+    width: 40%;
+    padding: 0px 150px 0 170px;
+}
+
+footer table tr .col1 h4{
+    padding: 10px 0;
+    padding-top: 0;
+    color: #409F3A;
+    font-weight: bold;
+}
+
+footer table tr .col1 p{
+    margin: 30px 0;
+}
+
+footer table tr .col1 i{
+    background-color: #409F3A;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #000;
+}
+
+footer table tr .mssv{
+    width: 20%;
+} 
+
+@media (max-width: 1200px) {
+    .product .product-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    
+    header .left, .right {
+        width: 20%; 
+    }
+    
+    header .center {
+        width: 48%;
+    }
+    section .filter .infomation .gender,
+    section .filter .infomation .color, 
+    section .filter .infomation .size, 
+    section .filter .infomation .price {
+        width: 45%; 
+        margin-bottom: 15px;
+    }
+
+    footer table tr .col1{
+        width: 20%;
+        padding: 0px 150px 0 130px;
+    }
+}
+
+@media (max-width: 768px) {
+     header {
+        height: 80px; 
+        padding: 10px 0;
+        position: relative;
+    }
+
+
+    header .right {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        display: flex; 
+        align-items: center; 
+        padding-right: 0;
+        gap: 10px;
+        width: auto; 
+    }
+    header .right button,
+    header .right .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+        background: #f5f5f5;
+    }
+    .menu-toggle {
+        display: inline-flex;
+        font-size: 20px;
+        position: static; 
+        margin-left: 0;
+    }
+    header .left {
+        position: absolute;
+        left: 10px;
+        top: 35px;
+        margin-right: 0;
+    }
+    header .left a{
+        transform: translateY(20px);
+    }
+    header .left img {
+        height: 70px;
+        width: auto;
+
+    }
+    header .center {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    nav.desktop-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+
+    .mobile-nav li a:hover{
+        background-color: rgb(241, 238, 238);
+        color: #409F3A;
+    }
+    nav ul li {
+        padding: 0 10px;
+    }
+    .slide img {
+        height: 300px;
+        margin-top: 30px;
+    }
+    .product .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section .filter .infomation {
+        width: 90%;
+    }
+    section .filter .infomation .gender,
+    section .filter .infomation .color, 
+    section .filter .infomation .size, 
+    section .filter .infomation .price {
+        width: 100%;
+    }
+
+    section .filter .infomation .gender label {
+        display: inline-block;
+        padding-left: 0;
+        margin-right: 15px;
+    }
+    .product {
+        width: 90%;
+    }
+}
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    width: 220px; 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.4s ease-out forwards;
+    margin: 10px; 
+    border: 1px solid #eee; 
+}
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+.product-card img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.03); 
+}
+.product-card h3 {
+    font-size: 16px; 
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 8px 0;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.product-card .price {
+    font-size: 14px; 
+    color: #e74c3c;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.product-card .options {
+    display: flex;
+    justify-content: space-between; 
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card .options label {
+    display: none; 
+}
+
+.product-card .options select {
+    width: 48%; 
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+    background: #fff;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card .options select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+.product-card button {
+    width: 100%;
+    padding: 8px; 
+    border: none;
+    border-radius: 4px;
+    font-size: 13px; 
+    cursor: pointer;
+    margin-top: 5px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-card button:first-of-type {
+    background-color: #2ecc71; 
+    color: white;
+}
+
+.product-card button:first-of-type:hover {
+    background-color: #27ae60;
+    transform: scale(1.03); 
+}
+.product-card button:last-of-type {
+    background-color: #3498db;
+    color: white;
+}
+
+.product-card button:last-of-type:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+section {
+    padding: 20px 0; 
+    background-color: #f8f9fa; 
+}
+.filter {
+    width: 1200px; 
+    margin: 0 auto; 
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+.infomation {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+.infomation h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50; 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+.type p, .price p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555; 
+    margin: 0;
+}
+.type select, .price select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 150px; 
+}
+.search {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #3498db, #2980b9); 
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search:hover {
+    background: linear-gradient(90deg, #2980b9, #1f618d); 
+    transform: scale(1.05);
+}
+
+.search:active {
+    transform: scale(0.98); 
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.filter {
+    animation: fadeIn 0.5s ease-out forwards; 
+}
