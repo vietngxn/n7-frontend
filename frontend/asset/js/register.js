@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://n7-fashion-1.onrender.com';
 function handleSignup(event) {
     event.preventDefault();
     const customerUserName = document.getElementById('signupUsername').value.trim();
